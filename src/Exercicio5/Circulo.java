@@ -20,7 +20,6 @@ public class Circulo {
 
         double newRaio = x+= raio;
 
-
         double pontoNovo = (newRaio / raio) * y[0];
         double pontoNovo2 = (newRaio / raio) * y[1];
 
@@ -37,9 +36,9 @@ public class Circulo {
         System.out.println("Novo raio: " + newRaio + "\n" +
                 "Nova posição do ponto: [" + pontoNovo + "," + pontoNovo2 + "].");
     }
-
-    public void mover(double x, double y) {
-
+    public String area() {
+        double area = Math.PI * Math.pow(raio, 2);
+        return "Área: " + area;
     }
      public int getRaio() {
         return raio;

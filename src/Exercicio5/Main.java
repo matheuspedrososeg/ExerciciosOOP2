@@ -9,6 +9,6 @@ public class Main {
         Circulo circulo = new Circulo(4, ponto);
         circulo.inflar(2, ponto);
         circulo.desinflar(2, ponto);
-
+        System.out.println(circulo.area());
     }
 }
