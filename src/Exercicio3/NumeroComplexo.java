@@ -28,7 +28,8 @@ public class NumeroComplexo {
         return "Resultado: " + subX + " + " + subY + "i.";
     }
     public double multiplicar(int a, int b, int c, int d) {
-        
+
+
         return 0;
     }
 

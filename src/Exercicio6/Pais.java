@@ -1,5 +1,7 @@
 package Exercicio6;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Pais {
@@ -12,6 +14,7 @@ public class Pais {
         this.ISO = ISO;
         this.nome = nome;
         this.dimensao = dimensao;
+        this.populacao = populacao;
     }
 
     @Override
@@ -25,6 +28,23 @@ public class Pais {
     public double density(int populacao, int dimensao) {
         double densidade = (double) populacao / dimensao;
         return densidade;
+    }
+    public void fronteiras(ArrayList<String> fronteirasPais) {
+        if (fronteirasPais.size() < 2) {
+            System.out.println("A fronteira do país é:");
+            for (int i = 0; i < fronteirasPais.size(); i++) {
+                System.out.println(fronteirasPais.get(i));
+                System.out.println();
+            }
+        }
+        else {
+            System.out.println("As fronteiras do país são:");
+            for (int i = 0; i < fronteirasPais.size(); i++) {
+                System.out.println(fronteirasPais.get(i));
+                System.out.println();
+            }
+        }
+
     }
 
     public String getISO() {
