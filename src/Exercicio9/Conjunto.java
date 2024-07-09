@@ -1,29 +1,19 @@
 package Exercicio9;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Conjunto {
-    ArrayList<String> list;
-    ArrayList<String> list2;
-    Conjunto instancia = new Conjunto();
-    List<String> uniao = new ArrayList<>();
-
     public String adicionar(String e, List<String> list) {
         if (verificar(e, list)) {
-            System.out.println("O elemento já existe na lista.");
 
         } else {
             list.add(e);
-            System.out.println("Elemento adicionado com sucesso.");
-
         }
         return e;
     }
 
     public boolean verificar(String e, List<String> list) {
         for (int i = 0; i < list.size(); i++) {
-
             for (String v : list) {
                 if (v == e) {
                     return true;
@@ -33,18 +23,43 @@ public class Conjunto {
         return false;
     }
 
+    public void print(List<String> conjunto) {
+        for (int i = 0; i < conjunto.size(); i++) {
+            System.out.println(conjunto.get(i));
+        }
+    }
 
-    public String uniao() {
+    public String uniao(List<String> conjunto, List<String> list, List<String> list2) {
 
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list2.size(); j++) {
-                if (list.get(i) == list.get(j)) {
-                    instancia.adicionar(list.get(i), uniao);
+                adicionar(list.get(i), conjunto);
+                adicionar(list2.get(j), conjunto);
+            }
+        }
+        return null;
+    }
 
+    public String inter(List<String> conjunto, List<String> list, List<String> list2) {
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list2.size(); j++) {
+                if (list.get(i) == list2.get(j)) {
+                    adicionar(list.get(i), conjunto);
                 }
+            }
+        }
+        return null;
+    }
 
+    public String menos(List<String> conjunto, List<String> list, List<String> list2) {
+        for (int i = 0; i < list.size(); i++) {
+                if (!list.get(i).equals(list2.get(i))) {
+                    adicionar(list.get(i) , conjunto);
+
+                } else {
             }
         }
         return null;
     }
 }
+
