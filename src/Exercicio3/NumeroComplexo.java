@@ -27,11 +27,6 @@ public class NumeroComplexo {
         }
         return "Resultado: " + subX + " + " + subY + "i.";
     }
-    public double multiplicar(int a, int b, int c, int d) {
-
-
-        return 0;
-    }
 
     public int getReal() {
         return real;

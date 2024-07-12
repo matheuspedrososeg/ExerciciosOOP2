@@ -3,6 +3,7 @@ package Exercicio10;
 import java.util.Scanner;
 
 public class Main {
+    // metodo transposto só funciona caso a coluna seja maior que a quantidade de linhas, caso contrário, não ira preencher toda a transposta
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insira quantas colunas a sua matriz tem.");
@@ -23,7 +24,6 @@ public class Main {
 
 
         }
-
         System.out.println("Insira quantas colunas serão colocadas em sua próxima matriz.");
         int nCol = scanner.nextInt();
         System.out.println("Insira quantas linhas serão colocadas em sua próxima matriz.");
@@ -37,15 +37,21 @@ public class Main {
                 int element = scanner.nextInt();
                 matriz1.getMatriz()[i][j] = element;
             }
-
-
         }
 
-        matriz.print(matriz);
-        matriz1.print(matriz1);
-        System.out.println(matriz.equals(matriz, matriz1));
-        matriz.oposta(matriz);
-        matriz.print(matriz);
+        // testar metodos individualmente, pois pode ocorrer conflitos
+
+//        matriz.print(matriz.copiar(matriz));
+//        matriz.print(matriz.mulitplicar(matriz, matriz1));
+//        matriz.print(matriz.somar(matriz, matriz1));
+//        matriz.print(matriz.subtrair(matriz, matriz1));
+//        System.out.println(matriz.diagonal(matriz));
+//        System.out.println(matriz.identidade(matriz));
+//        matriz.print(matriz);
+//        matriz1.print(matriz1);
+//        System.out.println(matriz.equals(matriz, matriz1));
+//        matriz.print(matriz.transposta(matriz));
+//        matriz.print(matriz.oposta(matriz));
     }
 
 }

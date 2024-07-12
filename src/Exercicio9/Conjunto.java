@@ -56,9 +56,9 @@ public class Conjunto {
                 if (!list.get(i).equals(list2.get(i))) {
                     adicionar(list.get(i) , conjunto);
 
-                } else {
+                }
             }
-        }
+
         return null;
     }
 }

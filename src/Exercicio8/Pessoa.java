@@ -18,8 +18,13 @@ public class Pessoa {
     public Pessoa(String nome) {
         this.nome = nome;
     }
-    public Pessoa antecessora(Pessoa pessoa) {
-        return pessoa;
+    public void antecessora(Pessoa pessoa) {
+        if (pessoa.getPai() == null && pessoa.getMae() == null) {
+            System.out.println("Esta pessoa não tem antecessores atribuidos.");
+        }
+        else {
+            System.out.println("Esta pessoa tem antecessores.");
+        }
     }
 
     public boolean irmaos(Object o) {

@@ -18,5 +18,7 @@ public class Main {
 
         System.out.println(pessoa.irmaos(pessoa1));
         System.out.println(pessoa.equals(pessoaIgual));
+        pessoa.antecessora(pessoa);
+
     }
 }
